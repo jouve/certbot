@@ -10,6 +10,6 @@ set -e
 apk add --no-cache gcc libffi-dev make musl-dev openssl-dev python3-dev
 pip3 install --upgrade pip
 pip install pipenv
-pip freeze
-pipenv lock
+pip freeze > pipenv.txt
+pipenv lock -r > certbox.txt
 "
