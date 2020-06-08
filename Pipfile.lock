@@ -18,34 +18,34 @@
     "default": {
         "acme": {
             "hashes": [
-                "sha256:d2f6799f7fce2414fc1a6753ced91c0ccdf1d0b2cee892c509851db45402fb5b",
-                "sha256:f12cb59762e0b833911b87e95cb16e85a162517ba4aa3440594bdf3b8126fc69"
+                "sha256:66de67b394bb7606f97f2c21507e6eb6a88936db2a940f5c4893025f87e3852a",
+                "sha256:b051ff7dd3935b2032c2f8c8386e905d9b658eba9f3455e352650d85bea9c8f0"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
-            "version": "==1.4.0"
+            "version": "==1.5.0"
         },
         "certbot": {
             "hashes": [
-                "sha256:5f8be1e6087d2f1f742caf0048b0f46bac8d3a655d038d5355abd1638523d87e",
-                "sha256:69b5b7925de0d3b693b00a40bf109d85afb24c7199bf616339d74d59a80d8d96"
+                "sha256:c52017a4f84137e1312c898d6ae69c5f7977d79d2bd4c2df013cbbf39b6539bf",
+                "sha256:ec1f01af06b52a6f079f5b02cb70e88f0671a7b13ecb3e45b040563e32c6e53a"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
-            "version": "==1.4.0"
+            "version": "==1.5.0"
         },
         "certbot-dns-ovh": {
             "hashes": [
-                "sha256:9899506f7d7b8eb5903b2be5041e2a874a88ff9916aaccce9cf3dd367d0c9c2d",
-                "sha256:dfa3322020ce627265ffbcb49b3156e257aa635b462d6cd95d71caf8071ae0ee"
+                "sha256:0cd768db3138ea2e2d4e961d12fca57307ded29d4e9b0d19579c55e8f9f405c0",
+                "sha256:49fd4b543fbf7412e583e5dba99a24dc27574bb870aa593acab8e293f59a4e71"
             ],
             "index": "pypi",
-            "version": "==1.4.0"
+            "version": "==1.5.0"
         },
         "certifi": {
             "hashes": [
-                "sha256:1d987a998c75633c40847cc966fcf5904906c920a7f17ef374f5aa4282abd304",
-                "sha256:51fcb31174be6e6664c5f69e3e1691a2d72a1a12e90f872cbdb1567eb47b6519"
+                "sha256:5ad7e9a056d25ffa5082862e36f119f7f7cec6457fa07ee2f8c339814b80c9b1",
+                "sha256:9cd41137dc19af6a5e03b630eefe7d1f458d964d406342dd3edf625839b944cc"
             ],
-            "version": "==2020.4.5.1"
+            "version": "==2020.4.5.2"
         },
         "cffi": {
             "hashes": [
@@ -132,10 +132,10 @@
         },
         "dns-lexicon": {
             "hashes": [
-                "sha256:ebc58b1496fc2082a6f340a3b4aa96cd9d40f2700c75b646504622fb126466cd"
+                "sha256:17efc88c957ed3e9ab58a5af45d59bcb24cedd7c5490cb23f31bd50e4ea541ad"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
-            "version": "==3.3.22"
+            "version": "==3.3.24"
         },
         "future": {
             "hashes": [
@@ -162,10 +162,10 @@
         },
         "parsedatetime": {
             "hashes": [
-                "sha256:3b835fc54e472c17ef447be37458b400e3fefdf14bb1ffdedb5d2c853acf4ba1",
-                "sha256:d2e9ddb1e463de871d32088a3f3cea3dc8282b1b2800e081bd0ef86900451667"
+                "sha256:4cb368fbb18a0b7231f4d76119165451c8d2e35951455dfee97c62a87b04d455",
+                "sha256:cb96edd7016872f58479e35879294258c71437195760746faffedb692aef000b"
             ],
-            "version": "==2.5"
+            "version": "==2.6"
         },
         "pycparser": {
             "hashes": [
