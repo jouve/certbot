@@ -26,4 +26,6 @@ RUN set -e; \
     rm -rf /root/.cache; \
     apk del --no-cache gcc libffi-dev make musl-dev openssl-dev python3-dev
 
+RUN ln -s /usr/share/certbot/bin/certbot /usr/bin
 VOLUME /etc/letsencrypt
+ENTRYPOINT ["certbot"]
