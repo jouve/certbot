@@ -1,4 +1,4 @@
-FROM alpine:3.12.0
+FROM alpine:3.12.1
 
 COPY poetry.txt /
 
@@ -15,7 +15,7 @@ WORKDIR /srv
 
 RUN /usr/share/poetry/bin/poetry export > /requirements.txt
 
-FROM alpine:3.12.0
+FROM alpine:3.12.1
 
 COPY --from=0 /requirements.txt /usr/share/certbot/requirements.txt
 
