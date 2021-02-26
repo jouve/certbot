@@ -6,21 +6,21 @@ else
   SUDO=
 fi
 
-$SUDO docker volume create apk-cache || true
-$SUDO docker volume create pip-cache || true
-$SUDO docker volume create poetry-cache || true
-$SUDO docker volume create poetry-artifacts || true
-$SUDO docker run -i -t \
-  -v apk-cache:/var/cache/apk \
-  -v pip-cache:/root/.cache/pip \
-  -v poetry-artifacts:/root/.cache/pypoetry/artifacts \
-  -v poetry-cache:/root/.cache/pypoetry/cache \
-  -v $PWD:/srv \
-  -w /srv $(head -n1 Dockerfile | sed -n -e 's/FROM //p') sh -x -c "
+if docker container inspect cache_cache_1 &>/dev/null; then
+  cache=--volumes-from=cache_cache_1
+else
+  cache=
+fi
+
+$SUDO docker run \
+  $cache \
+  --volume $PWD:/srv \
+  --workdir /srv \
+  $(head -n1 Dockerfile | sed -n -e 's/FROM //p') sh -x -c "
 set -e
 apk add --no-cache alpine-conf
 setup-apkcache /var/cache/apk
-apk add --no-cache gcc libffi-dev musl-dev openssl-dev python3-dev;
+apk add --no-cache cargo gcc libffi-dev musl-dev openssl-dev python3-dev;
 python3 -m venv /usr/share/poetry
 /usr/share/poetry/bin/pip install --upgrade pip
 /usr/share/poetry/bin/pip install wheel
@@ -28,6 +28,6 @@ python3 -m venv /usr/share/poetry
 /usr/share/poetry/bin/pip freeze --all > poetry.txt
 /usr/share/poetry/bin/poetry lock
 apk add --no-cache libffi python3 \
-                   gcc libffi-dev make musl-dev openssl-dev python3-dev
+                   cargo gcc libffi-dev make musl-dev openssl-dev python3-dev rust
 /usr/share/poetry/bin/poetry install
 "
