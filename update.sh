@@ -16,18 +16,12 @@ $SUDO docker run \
   $cache \
   --volume $PWD:/srv \
   --workdir /srv \
-  $(head -n1 Dockerfile | sed -n -e 's/FROM //p') sh -x -c "
+  $(sed -n -e '/FROM /{s/FROM //; p; q }' Dockerfile | head -n1) sh -x -c "
 set -e
 apk add --no-cache alpine-conf
 setup-apkcache /var/cache/apk
 apk add --no-cache cargo gcc libffi-dev musl-dev openssl-dev python3-dev;
 python3 -m venv /usr/share/poetry
-/usr/share/poetry/bin/pip install --upgrade pip
-/usr/share/poetry/bin/pip install wheel
-/usr/share/poetry/bin/pip install poetry
-/usr/share/poetry/bin/pip freeze --all > poetry.txt
+/usr/share/poetry/bin/pip install -r poetry.txt
 /usr/share/poetry/bin/poetry lock
-apk add --no-cache libffi python3 \
-                   cargo gcc libffi-dev make musl-dev openssl-dev python3-dev rust
-/usr/share/poetry/bin/poetry install
 "
