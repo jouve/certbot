@@ -1,6 +1,6 @@
 [[package]]
 name = "acme"
-version = "1.14.0"
+version = "1.15.0"
 description = "ACME protocol implementation in Python"
 category = "main"
 optional = false
@@ -36,7 +36,7 @@ lxml = ["lxml"]
 
 [[package]]
 name = "certbot"
-version = "1.14.0"
+version = "1.15.0"
 description = "ACME client"
 category = "main"
 optional = false
@@ -62,7 +62,7 @@ docs = ["repoze.sphinx.autointerface", "Sphinx (>=1.2)", "sphinx-rtd-theme"]
 
 [[package]]
 name = "certbot-dns-ovh"
-version = "1.14.0"
+version = "1.15.0"
 description = "OVH DNS Authenticator plugin for Certbot"
 category = "main"
 optional = false
@@ -106,7 +106,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "configargparse"
-version = "1.4"
+version = "1.4.1"
 description = "A drop-in replacement for argparse that allows options to also be set via config files and/or environment variables."
 category = "main"
 optional = false
@@ -155,7 +155,7 @@ python-versions = "*"
 
 [[package]]
 name = "dns-lexicon"
-version = "3.5.6"
+version = "3.6.0"
 description = "Manipulate DNS records on various DNS providers in a standardized/agnostic way"
 category = "main"
 optional = false
@@ -164,19 +164,17 @@ python-versions = ">=3.6,<4.0"
 [package.dependencies]
 beautifulsoup4 = ">=4,<5"
 cryptography = ">=2,<4"
-future = ">=0,<1"
-pyyaml = ">=5,<6"
+pyyaml = ">=3,<6"
 requests = ">=2,<3"
 tldextract = ">=2,<4"
 
 [package.extras]
 route53 = ["boto3 (>=1,<2)"]
-full = ["boto3 (>=1,<2)", "localzone (>=0.9.8,<1)", "pynamecheap (>=0,<1)", "softlayer (>=5,<6)", "transip (>=2,<3)", "xmltodict (>=0,<1)", "zeep (>=3,<5)"]
+full = ["boto3 (>=1,<2)", "localzone (>=0.9.8,<1)", "softlayer (>=5,<6)", "transip (>=2,<3)", "zeep (>=3,<5)"]
+ddns = ["dnspython (>=2,<3)"]
 localzone = ["localzone (>=0.9.8,<1)"]
-namecheap = ["pynamecheap (>=0,<1)"]
 softlayer = ["softlayer (>=5,<6)"]
 transip = ["transip (>=2,<3)"]
-plesk = ["xmltodict (>=0,<1)"]
 gransy = ["zeep (>=3,<5)"]
 
 [[package]]
@@ -186,14 +184,6 @@ description = "A platform independent file lock."
 category = "main"
 optional = false
 python-versions = "*"
-
-[[package]]
-name = "future"
-version = "0.18.2"
-description = "Clean single-source support for Python 3 and 2"
-category = "main"
-optional = false
-python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "idna"
@@ -330,7 +320,7 @@ requests = ">=2.0.1,<3.0.0"
 
 [[package]]
 name = "six"
-version = "1.15.0"
+version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
 category = "main"
 optional = false
@@ -437,8 +427,8 @@ content-hash = "d6c7d56f1adddbb52cb3975afaeb0cfdbd7004b824afd1a2c53ae785a29573cb
 
 [metadata.files]
 acme = [
-    {file = "acme-1.14.0-py2.py3-none-any.whl", hash = "sha256:4f48c41261202f1a389ec2986b2580b58f53e0d5a1ae2463b34318d78b87fc66"},
-    {file = "acme-1.14.0.tar.gz", hash = "sha256:61daccfb0343628cbbca551a7fc4c82482113952c21db3fe0c585b7c98fa1c35"},
+    {file = "acme-1.15.0-py2.py3-none-any.whl", hash = "sha256:b473efeb7553e90c54c9d9972bfd39e42f7102fe0ae4b249917d40590aed36b9"},
+    {file = "acme-1.15.0.tar.gz", hash = "sha256:070cc58910e2c36892adf830402a68e28287dc1c09103c7e0eaf1dfa460bee4d"},
 ]
 beautifulsoup4 = [
     {file = "beautifulsoup4-4.9.3-py2-none-any.whl", hash = "sha256:4c98143716ef1cb40bf7f39a8e3eec8f8b009509e74904ba3a7b315431577e35"},
@@ -446,12 +436,12 @@ beautifulsoup4 = [
     {file = "beautifulsoup4-4.9.3.tar.gz", hash = "sha256:84729e322ad1d5b4d25f805bfa05b902dd96450f43842c4e99067d5e1369eb25"},
 ]
 certbot = [
-    {file = "certbot-1.14.0-py2.py3-none-any.whl", hash = "sha256:67b4d26ceaea6c7f8325d0d45169e7a165a2cabc7122c84bc971ba068ca19cca"},
-    {file = "certbot-1.14.0.tar.gz", hash = "sha256:959ea90c6bb8dca38eab9772722cb940972ef6afcd5f15deef08b3c3636841eb"},
+    {file = "certbot-1.15.0-py2.py3-none-any.whl", hash = "sha256:942cf47a19b4530dcde7c21fe85be4e8831dd9c47c00a3adccd70e70b61aecc0"},
+    {file = "certbot-1.15.0.tar.gz", hash = "sha256:db7fe523f4cb3ccc69093c224e5e467ddbf94c42b16d32a10dfd35fcbeb69fe1"},
 ]
 certbot-dns-ovh = [
-    {file = "certbot-dns-ovh-1.14.0.tar.gz", hash = "sha256:228622168b33ce628eb9fe0119f4afbcf034c4d94849002f2454616e52898000"},
-    {file = "certbot_dns_ovh-1.14.0-py2.py3-none-any.whl", hash = "sha256:7dc0452d9a18ed6d7194aa42d5e550920259270947b005d370c109c94c4fcad6"},
+    {file = "certbot-dns-ovh-1.15.0.tar.gz", hash = "sha256:2606b18f817cde51f6cbb3f595aa215e8657d0248110a07af9c5ba95e0065562"},
+    {file = "certbot_dns_ovh-1.15.0-py2.py3-none-any.whl", hash = "sha256:81091906d1960ca6e6a61f8a7cb219d95a6f6841f854e2d48c48b8df6c269405"},
 ]
 certifi = [
     {file = "certifi-2020.12.5-py2.py3-none-any.whl", hash = "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"},
@@ -501,7 +491,8 @@ chardet = [
     {file = "chardet-4.0.0.tar.gz", hash = "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"},
 ]
 configargparse = [
-    {file = "ConfigArgParse-1.4.tar.gz", hash = "sha256:abef9ff44fb0091f0e3bb2ee7e5b26a02b5b62d45408a5272a9bd461f5b59b4b"},
+    {file = "ConfigArgParse-1.4.1-py3-none-any.whl", hash = "sha256:eaff53ff3627c3e412392bd4a703d4c39e3425a953557f4ef69a20f03358c26f"},
+    {file = "ConfigArgParse-1.4.1.tar.gz", hash = "sha256:6df537158f28c5ef2e8a8146781833abbc6cb7fca81b1b55d18808ce3439235e"},
 ]
 configobj = [
     {file = "configobj-5.0.6.tar.gz", hash = "sha256:a2f5650770e1c87fb335af19a9b7eb73fc05ccf22144eb68db7d00cd2bcb0902"},
@@ -525,15 +516,12 @@ distro = [
     {file = "distro-1.5.0.tar.gz", hash = "sha256:0e58756ae38fbd8fc3020d54badb8eae17c5b9dcbed388b17bb55b8a5928df92"},
 ]
 dns-lexicon = [
-    {file = "dns-lexicon-3.5.6.tar.gz", hash = "sha256:78e72b9c6fe293b329df31b30d92da23f1016f72ebefe3016b6deb7f0257c20b"},
-    {file = "dns_lexicon-3.5.6-py3-none-any.whl", hash = "sha256:e632aad33a17795a7caf64e1ebb06752e17323c22c60ea87c0c8dfd4330ad3a8"},
+    {file = "dns-lexicon-3.6.0.tar.gz", hash = "sha256:3f76eb266381dabee6e1c594d3a52700bd66811648328e0090a67a807cb68fd9"},
+    {file = "dns_lexicon-3.6.0-py3-none-any.whl", hash = "sha256:234302261eb2fccabcbd7aa55654d50ce10359c233b5fede6d088cae52635705"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
     {file = "filelock-3.0.12.tar.gz", hash = "sha256:18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59"},
-]
-future = [
-    {file = "future-0.18.2.tar.gz", hash = "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
@@ -619,8 +607,8 @@ requests-toolbelt = [
     {file = "requests_toolbelt-0.9.1-py2.py3-none-any.whl", hash = "sha256:380606e1d10dc85c3bd47bf5a6095f815ec007be7a8b69c878507068df059e6f"},
 ]
 six = [
-    {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
-    {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
+    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
+    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 soupsieve = [
     {file = "soupsieve-2.2.1-py3-none-any.whl", hash = "sha256:c2c1c2d44f158cdbddab7824a9af8c4f83c76b1e23e049479aa432feb6c4c23b"},
