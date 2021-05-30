@@ -22,13 +22,13 @@ RUN set -e; \
     ; \
     python3 -m venv /usr/share/certbot; \
     /usr/share/certbot/bin/pip install -r /usr/share/certbot/requirements.txt; \
-    apk add --no-network --virtual .run-deps $( \
-        scanelf --needed --nobanner --format '%n#p' --recursive /usr/share/poetry \
+    apk add --no-cache --virtual .run-deps python3 $( \
+        scanelf --needed --nobanner --format '%n#p' --recursive /usr/share/certbot \
         | tr ',' '\n' \
         | sed 's/^/so:/' \
         | sort -u \
     ); \
-    apk del --no-cache --no-network .build-deps; \
+    apk del --no-cache .build-deps; \
     rm -rf /root/.cache /root/.cargo
 
 RUN ln -s /usr/share/certbot/bin/certbot /usr/bin
