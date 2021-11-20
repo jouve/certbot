@@ -160,33 +160,32 @@ python-versions = "*"
 
 [[package]]
 name = "dns-lexicon"
-version = "3.4.2"
+version = "3.8.3"
 description = "Manipulate DNS records on various DNS providers in a standardized/agnostic way"
 category = "main"
 optional = false
 python-versions = ">=3.6,<4.0"
 
 [package.dependencies]
-beautifulsoup4 = "*"
-cryptography = "*"
-future = "*"
-pyyaml = "*"
-requests = "*"
-tldextract = "*"
+beautifulsoup4 = ">=4"
+cryptography = ">=2"
+pyyaml = ">=3"
+requests = ">=2"
+tldextract = ">=2"
 
 [package.extras]
-route53 = ["boto3"]
-full = ["boto3", "localzone", "pynamecheap", "softlayer", "transip", "xmltodict", "zeep"]
-localzone = ["localzone"]
-namecheap = ["pynamecheap"]
-softlayer = ["softlayer"]
-transip = ["transip"]
-plesk = ["xmltodict"]
-gransy = ["zeep"]
+route53 = ["boto3 (>=1)"]
+full = ["boto3 (>=1)", "localzone (>=0.9.8)", "oci (>=2)", "softlayer (>=5)", "zeep (>=3)"]
+ddns = ["dnspython (>=2)"]
+localzone = ["localzone (>=0.9.8)"]
+oci = ["oci (>=2)"]
+softlayer = ["softlayer (>=5)"]
+transip = ["transip (>=2)"]
+gransy = ["zeep (>=3)"]
 
 [[package]]
 name = "filelock"
-version = "3.3.2"
+version = "3.4.0"
 description = "A platform independent file lock."
 category = "main"
 optional = false
@@ -195,14 +194,6 @@ python-versions = ">=3.6"
 [package.extras]
 docs = ["furo (>=2021.8.17b43)", "sphinx (>=4.1)", "sphinx-autodoc-typehints (>=1.12)"]
 testing = ["covdefaults (>=1.2.0)", "coverage (>=4)", "pytest (>=4)", "pytest-cov", "pytest-timeout (>=1.4.2)"]
-
-[[package]]
-name = "future"
-version = "0.18.2"
-description = "Clean single-source support for Python 3 and 2"
-category = "main"
-optional = false
-python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "idna"
@@ -214,7 +205,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "josepy"
-version = "1.10.0"
+version = "1.11.0"
 description = "JOSE protocol implementation in Python"
 category = "main"
 optional = false
@@ -347,7 +338,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "soupsieve"
-version = "2.3"
+version = "2.3.1"
 description = "A modern CSS selector implementation for Beautiful Soup."
 category = "main"
 optional = false
@@ -441,8 +432,8 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "~3.9"
-content-hash = "cf8b9ffb514b71cfd8034a6d25a25abc1f0aac2adb3a9e43d2edaa5fc1fda69b"
+python-versions = "^3.9,>=3.9.5"
+content-hash = "7eff01740b063909f4e1995147a6f1f032682ac343e97fbdb83d17eb1fc05f56"
 
 [metadata.files]
 acme = [
@@ -555,23 +546,20 @@ distro = [
     {file = "distro-1.6.0.tar.gz", hash = "sha256:83f5e5a09f9c5f68f60173de572930effbcc0287bb84fdc4426cb4168c088424"},
 ]
 dns-lexicon = [
-    {file = "dns-lexicon-3.4.2.tar.gz", hash = "sha256:5f71377e3f3fa603abc19ae0533c5739105c000b739b903ad7897074e48a7704"},
-    {file = "dns_lexicon-3.4.2-py3-none-any.whl", hash = "sha256:6870eac426b7bab2ae279a6acdaa2a96411a2b8168cfd441c8c1d2dc3a619d16"},
+    {file = "dns-lexicon-3.8.3.tar.gz", hash = "sha256:ec359ea5a1fc84dbbf30bb3f1f51ce5fc8178915e292cb45700985ceddb99393"},
+    {file = "dns_lexicon-3.8.3-py3-none-any.whl", hash = "sha256:68e2ab2adf44a847acf8a97892e7a3bf8176eca32acb7f13c288c84196e111f6"},
 ]
 filelock = [
-    {file = "filelock-3.3.2-py3-none-any.whl", hash = "sha256:bb2a1c717df74c48a2d00ed625e5a66f8572a3a30baacb7657add1d7bac4097b"},
-    {file = "filelock-3.3.2.tar.gz", hash = "sha256:7afc856f74fa7006a289fd10fa840e1eebd8bbff6bffb69c26c54a0512ea8cf8"},
-]
-future = [
-    {file = "future-0.18.2.tar.gz", hash = "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"},
+    {file = "filelock-3.4.0-py3-none-any.whl", hash = "sha256:2e139a228bcf56dd8b2274a65174d005c4a6b68540ee0bdbb92c76f43f29f7e8"},
+    {file = "filelock-3.4.0.tar.gz", hash = "sha256:93d512b32a23baf4cac44ffd72ccf70732aeff7b8050fcaf6d3ec406d954baf4"},
 ]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
 ]
 josepy = [
-    {file = "josepy-1.10.0-py2.py3-none-any.whl", hash = "sha256:0c91623287db4cde4fe77c38be6bc9122faf137f78680978aa3e96bb0f10f2e8"},
-    {file = "josepy-1.10.0.tar.gz", hash = "sha256:e9bcaf605411cadaec04841ae2d5f77ebb178b7b6df7c9aed1d97399ac18685b"},
+    {file = "josepy-1.11.0-py2.py3-none-any.whl", hash = "sha256:8473f6674497383627621b40aacb4955afdd4e7b205dca45a68486aa989bab60"},
+    {file = "josepy-1.11.0.tar.gz", hash = "sha256:40ef59f2f537ec01bafe698dad66281f6ccf4642f747411647db403ab8fa9a2d"},
 ]
 parsedatetime = [
     {file = "parsedatetime-2.6-py3-none-any.whl", hash = "sha256:cb96edd7016872f58479e35879294258c71437195760746faffedb692aef000b"},
@@ -657,8 +645,8 @@ six = [
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 soupsieve = [
-    {file = "soupsieve-2.3-py3-none-any.whl", hash = "sha256:617ffc4d0dfd39c66f4d1413a6e165663a34eca86be9b54f97b91756300ff6df"},
-    {file = "soupsieve-2.3.tar.gz", hash = "sha256:e4860f889dfa88774c07da0b276b70c073b6470fa1a4a8350800bb7bce3dcc76"},
+    {file = "soupsieve-2.3.1-py3-none-any.whl", hash = "sha256:1a3cca2617c6b38c0343ed661b1fa5de5637f257d4fe22bd9f1338010a1efefb"},
+    {file = "soupsieve-2.3.1.tar.gz", hash = "sha256:b8d49b1cd4f037c7082a9683dfa1801aa2597fb11c3a1155b7a5b94829b4f1f9"},
 ]
 tldextract = [
     {file = "tldextract-3.1.2-py2.py3-none-any.whl", hash = "sha256:f55e05f6bf4cc952a87d13594386d32ad2dd265630a8bdfc3df03bd60425c6b0"},
