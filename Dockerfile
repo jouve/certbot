@@ -6,7 +6,7 @@ WORKDIR /srv
 
 RUN poetry export --without-hashes > /requirements.txt
 
-FROM alpine:3.16.2
+FROM alpine:3.17.0
 
 COPY --from=0 /requirements.txt /usr/share/certbot/requirements.txt
 
