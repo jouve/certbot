@@ -17,7 +17,7 @@ RUN set -e; \
         python3-dev \
     ; \
     python3 -m venv /usr/share/certbot; \
-    /usr/share/certbot/bin/pip install --no-cache-dir pip==22.3.1 setuptools==65.6.3 wheel==0.38.4; \
+    /usr/share/certbot/bin/pip install --no-cache-dir pip==23.1.2 setuptools==67.7.2 wheel==0.40.0; \
     /usr/share/certbot/bin/pip install --no-cache-dir --requirement /usr/share/certbot/requirements.txt; \
     apk add --no-cache --virtual .run-deps python3 $( \
         scanelf --needed --nobanner --format '%n#p' --recursive /usr/share/certbot \
